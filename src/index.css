@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-light font-sans;
+}
+
+@layer components {
+  /* Card de base (fond + border + radius) */
+  .card-base {
+    @apply rounded-xl border border-greyLight/20 bg-surface;
+  }
+
+  /* Card avec liseret doré permanent (très premium) */
+  .card-gold {
+    @apply card-base border-l-2 border-l-gold;
+  }
+
+  /* Card avec liseret doré au hover (très chic) */
+  .card-gold-hover {
+    @apply card-base border-l-2 border-l-transparent hover:border-l-gold transition;
+  }
+
+  /* Card “soft” (fond clair du thème) pour alternance/respiration */
+  .card-soft {
+    @apply rounded-2xl border border-greyLight/30 bg-greyLight/5;
+  }
+
+  /* CTA block (liseret + légère mise en avant) */
+  .card-cta {
+    @apply rounded-2xl border border-greyLight/20 bg-background border-l-4 border-l-gold;
+  }
+}
